@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -13,14 +12,13 @@ public class Movement : MonoBehaviour
 
     Rigidbody myRigidbody;
     AudioSource myAudioSource;
-    // Start is called before the first frame update
+
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
         myAudioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         ProcessThrust();
@@ -75,7 +73,7 @@ public class Movement : MonoBehaviour
             leftSideThrustEffects.Stop();
         }
     }
-    
+
     private void TurnLeft()
     {
         leftSideThrustEffects.Stop();
@@ -102,3 +100,4 @@ public class Movement : MonoBehaviour
         myRigidbody.freezeRotation = false;
     }
 }
+
