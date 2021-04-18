@@ -7,6 +7,9 @@ public class Movement : MonoBehaviour
     [SerializeField] float rocketThrust = 1f;
     [SerializeField] float rotation = 1f;
     [SerializeField] AudioClip mainEngine;
+    [SerializeField] ParticleSystem leftSideThrustEffects;
+    [SerializeField] ParticleSystem rightSideThrustEffects;
+    [SerializeField] ParticleSystem mainThrustEffects;
 
     Rigidbody myRigidbody;
     AudioSource myAudioSource;
@@ -28,27 +31,67 @@ public class Movement : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space))
         {
-            myRigidbody.AddRelativeForce(0, rocketThrust * Time.deltaTime, 0);
-            if(!myAudioSource.isPlaying)
-            {
-                myAudioSource.PlayOneShot(mainEngine);
-            }
+            StartThrusting();
         }
         else
         {
-            myAudioSource.Stop();
+            StopThrusting();
         }
+    }
+
+
+    private void StartThrusting()
+    {
+        myRigidbody.AddRelativeForce(0, rocketThrust * Time.deltaTime, 0);
+        if (!myAudioSource.isPlaying)
+        {
+            myAudioSource.PlayOneShot(mainEngine);
+        }
+        if (!mainThrustEffects.isPlaying)
+        {
+            mainThrustEffects.Play();
+        }
+    }
+
+    private void StopThrusting()
+    {
+        myAudioSource.Stop();
+        mainThrustEffects.Stop();
     }
 
     void ProcessRotation()
     {
         if(Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotation);
+            TurnLeft();
         }
         else if(Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-rotation);
+            TurnRight();
+        }
+        else
+        {
+            rightSideThrustEffects.Stop();
+            leftSideThrustEffects.Stop();
+        }
+    }
+    
+    private void TurnLeft()
+    {
+        leftSideThrustEffects.Stop();
+        ApplyRotation(rotation);
+        if (!rightSideThrustEffects.isPlaying)
+        {
+            rightSideThrustEffects.Play();
+        }
+    }
+    private void TurnRight()
+    {
+        rightSideThrustEffects.Stop();
+        ApplyRotation(-rotation);
+        if (!leftSideThrustEffects.isPlaying)
+        {
+            leftSideThrustEffects.Play();
         }
     }
 
