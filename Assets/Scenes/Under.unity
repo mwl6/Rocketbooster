@@ -216,37 +216,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!1 &741125900 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9111036647101973742, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}
-  m_PrefabInstance: {fileID: 9111036647397947515}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &741125901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741125900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 040bc3c05d31d2b438f367c3ee7653d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!64 &741125909
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741125900}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,18 +542,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 741125901, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 741125901, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9111036647101973740, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9111036647101973741, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -632,10 +589,6 @@ PrefabInstance:
     - target: {fileID: 9111036647101973742, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}
       propertyPath: m_Name
       value: Rocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 9111036647101973742, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 427d2b2e054d61c4da1ec48e51cc7786, type: 3}

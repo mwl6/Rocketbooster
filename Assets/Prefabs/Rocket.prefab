@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9111036647101973741}
   - component: {fileID: 9111036647101973730}
   - component: {fileID: 9111036647101973731}
-  - component: {fileID: 9111036647101973740}
   - component: {fileID: 8734234005320531402}
   - component: {fileID: 296500378}
   - component: {fileID: 741125901}
@@ -87,20 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &9111036647101973740
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9111036647101973742}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &8734234005320531402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rocketThrust: 1000
   rotation: 100
+  mainEngine: {fileID: 8300000, guid: cd9f81fb0b9c41248a37d1344402ac0c, type: 3}
 --- !u!54 &296500378
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -253,3 +239,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040bc3c05d31d2b438f367c3ee7653d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeDelay: 2
+  crash: {fileID: 8300000, guid: 79fea179540832e4d9d0852909c0ccf8, type: 3}
+  success: {fileID: 8300000, guid: 833306d6c139283418d5636fce37c6ff, type: 3}
