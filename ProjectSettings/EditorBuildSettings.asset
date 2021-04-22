@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Under.unity
     guid: c23459490be09a34a8cdd2898803f745
+  - enabled: 1
+    path: Assets/Scenes/Through.unity
+    guid: be71294224cf5a0429973b02698e2f14
+  - enabled: 1
+    path: Assets/Scenes/Collapsed.unity
+    guid: 1485ad7cff9072c449817435836dedf1
   m_configObjects: {}
