@@ -25,8 +25,7 @@ public class CollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(isTransitioning) { return; }
-        if(!collisionsEnabled) { return; }
+        if(isTransitioning || !collisionsEnabled) { return; }
 
         switch(other.gameObject.tag)
         {
@@ -34,7 +33,6 @@ public class CollisionHandler : MonoBehaviour
                 StartLevelSequence();
                 break;
             case "Friendly":
-                Debug.Log("Just tradin' paint!");
                 break;
             default:
                 StartCrashSequence();
